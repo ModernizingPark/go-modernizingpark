@@ -1,0 +1,44 @@
+# bmt  keystore  rlp  trie  whisperv6
+
+base: ubuntu:16.04
+targets:
+  - name: rlp
+    language: go
+    version: "1.13"
+    corpus: ./fuzzers/rlp/corpus
+    harness:
+      function: Fuzz
+      package: github.com/go-modernizingpark/go-modernizingpark/tests/fuzzers/rlp
+      checkout: github.com/go-modernizingpark/go-modernizingpark/
+  - name: keystore
+    language: go
+    version: "1.13"
+    corpus: ./fuzzers/keystore/corpus
+    harness:
+      function: Fuzz
+      package: github.com/go-modernizingpark/go-modernizingpark/tests/fuzzers/keystore
+      checkout: github.com/go-modernizingpark/go-modernizingpark/
+  - name: trie
+    language: go
+    version: "1.13"
+    corpus: ./fuzzers/trie/corpus
+    harness:
+      function: Fuzz
+      package: github.com/go-modernizingpark/go-modernizingpark/tests/fuzzers/trie
+      checkout: github.com/go-modernizingpark/go-modernizingpark/
+  - name: txfetcher
+    language: go
+    version: "1.13"
+    corpus: ./fuzzers/txfetcher/corpus
+    harness:
+      function: Fuzz
+      package: github.com/go-modernizingpark/go-modernizingpark/tests/fuzzers/txfetcher
+      checkout: github.com/go-modernizingpark/go-modernizingpark/
+  - name: whisperv6
+    language: go
+    version: "1.13"
+    corpus: ./fuzzers/whisperv6/corpus
+    harness:
+      function: Fuzz
+      package: github.com/go-modernizingpark/go-modernizingpark/tests/fuzzers/whisperv6
+      checkout: github.com/go-modernizingpark/go-modernizingpark/
